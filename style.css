@@ -266,3 +266,66 @@ body {
         margin-top: 10px;
     }
 }
+@media (max-width: 363.20px) {
+    body {
+     
+        padding-top: 70px; /* Reduced padding for very small screens */
+        font-size: 10px; /* Smaller font size for compact layout */
+        padding-left: 5px;
+        padding-right: 5px;
+        height: auto;
+        text-align: center;
+    }
+
+    .certificate {
+        width: 95%; /* Full width */
+      /* Reduced padding */
+        border-width: 2px;
+    }
+
+    .certificate-header .logo {
+        width: 25px; /* Smallest logo size for 363px */
+        margin-right: 3px;
+    }
+
+    .certificate-body {
+        text-align: center;
+    }
+
+    .certificate-body h2 {
+        font-size: 1.2em; /* Reduced further for better fit */
+    }
+
+    .certificate-body h3 {
+        font-size: 0.9em;
+        padding-bottom: 4px;
+    }
+
+    .certificate-body p {
+        font-size: 0.8em; /* Further reduced font size */
+    }
+
+    .certificate-footer {
+        font-size: 9px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%; /* Full width for all footer sections */
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .download-btn {
+        font-size: 11px;
+        padding: 6px 14px; /* Smaller button padding */
+        width: 80%; /* Button takes more width */
+        margin-top: 8px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
