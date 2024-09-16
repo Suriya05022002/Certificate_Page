@@ -1,0 +1,265 @@
+body {
+    font-style: oblique 40deg;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;font-style: oblique;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificate {
+    width: 800px;
+    height: 500px;
+    padding: 30px;
+    border: 5px solid #dcdcdc;
+    border-radius: 15px;
+    background-color: #fff;
+    background-image: url('images/frame.jpeg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out, slideIn 0.5s ease-in-out;
+}
+
+.certificate-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.certificate-header .logo {
+    width: 90px;
+    margin-right: 20px;
+}
+
+.certificate-body {
+    text-align: center;
+}
+
+.certificate-body h2 {
+    font-size: 2.3em;
+    margin: 10px 0;
+   
+}
+
+.certificate-body h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.certificate-footer {
+    position: absolute;
+    bottom: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    width: 33%;
+    text-align: center;
+    padding-right:15px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.download-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255,255,255,0.2);
+    transition: width 0.4s, height 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.download-btn:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0); }
+}
+
+/* Media Query for Tablets and Mobile Devices */
+@media (max-width: 768px) {
+    .certificate {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .certificate-body h2 {
+        font-size: 2em;
+    }
+
+    .certificate-body h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        font-size: 14px;
+    }
+
+    .download-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Media Query for Small Mobile Devices (Max width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding-top:100px;
+        margin: 0;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height:opx;
+        text-align: center;
+    }
+
+    .certificate {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-width: 3px;
+        box-shadow: none; /* Optional: remove the box shadow for simpler mobile appearance */
+    }
+
+    .certificate-header .logo {
+        width: 40px; /* Smaller logo for mobile view */
+        margin-right: 10px;
+    }
+
+    .certificate-body {
+        text-align: center;
+    }
+
+    .certificate-body h2 {
+        font-size: 1.6em; /* Further reduce font size */
+    }
+
+    .certificate-body h3 {
+        font-size: 1.2em;
+        padding-bottom:7px;
+    }
+
+    .certificate-body p {
+        font-size: 1em;
+    }
+
+    .certificate-footer {
+        position: static;
+        font-size: 11px;
+       
+        display: flex;
+       
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px; /* Add margin to separate sections */
+    }
+
+    .download-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 60%; /* Make button full-width on mobile */
+        margin-top: 15px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 420px) {
+    body {
+        padding-top: 80px; /* Adjust padding for smaller screens */
+        font-size: 11px; /* Reduce font size further */
+    }
+
+    .certificate-header .logo {
+        width: 30px; /* Even smaller logo for smaller devices */
+        margin-right: 5px;
+    }
+
+    .certificate-body h2 {
+        font-size: 1.4em; /* Further reduce font size */
+    }
+
+    .certificate-body h3 {
+        font-size: 1em;
+        padding-bottom: 5px;
+    }
+
+    .certificate-body p {
+        font-size: 0.9em;
+    }
+
+    .certificate-footer {
+        font-size: 10px;
+    }
+
+    .download-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+        width: 70%; /* Adjust button width */
+        margin-top: 10px;
+    }
+}
