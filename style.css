@@ -230,8 +230,11 @@ body {
 
 @media (max-width: 420px) {
     body {
+        width:95%;
         padding-top: 80px; /* Adjust padding for smaller screens */
         font-size: 11px; /* Reduce font size further */
+        padding-left:10px;
+        height:auto;
     }
 
     .certificate-header .logo {
